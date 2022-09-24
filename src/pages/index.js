@@ -1,15 +1,13 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 export default function Home() {
-
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
-    router.push('/Dashboard')
+    router.push('/Dashboard');
+  });
 
-  })
-
-  return <p>Redirecting...</p>
+  return <p>Redirecting...</p>;
 }
