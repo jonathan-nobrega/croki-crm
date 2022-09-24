@@ -9,8 +9,8 @@ import {
   UsersIcon
 } from '@heroicons/react/outline';
 import { useState } from 'react';
-import SideMenuDesktop from '../components/SideMenuDesktop';
-import SideMenuMobile from '../components/SideMenuMobile';
+import SideMenuDesktop from '../components/organisms/SideMenuDesktop';
+import SideMenuMobile from '../components/organisms/SideMenuMobile';
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
