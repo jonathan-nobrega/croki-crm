@@ -1,7 +1,4 @@
 /* This example requires Tailwind CSS v2.0+ */
-import SideMenuMobile from '../components/SideMenuMobile'
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
 import {
   CalendarIcon,
   ChartBarIcon,
@@ -9,10 +6,11 @@ import {
   HomeIcon,
   InboxIcon,
   MenuIcon,
-  UsersIcon,
-  XIcon,
-} from '@heroicons/react/outline'
-import SideMenuDesktop from '../components/SideMenuDesktop'
+  UsersIcon
+} from '@heroicons/react/outline';
+import { useState } from 'react';
+import SideMenuDesktop from '../components/SideMenuDesktop';
+import SideMenuMobile from '../components/SideMenuMobile';
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -20,11 +18,11 @@ const navigation = [
   { name: 'Projects', href: '#', icon: FolderIcon, current: false },
   { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
   { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
-]
+  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false }
+];
 
 export default function Example() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="h-screen flex overflow-hidden bg-gray-100">
@@ -67,5 +65,5 @@ export default function Example() {
         </main>
       </div>
     </div>
-  )
+  );
 }

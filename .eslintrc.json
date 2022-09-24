@@ -24,10 +24,17 @@
     "import/extensions": 0,
     "react/no-array-index-key": 0,
     "no-extra-semi": 1,
-    "max-len": [
+    // "max-len": [
+    //   "error",
+    //   { "code": 200}
+    // ],
+    "object-curly-newline": "off",
+    "no-undef": 0,
+    "comma-dangle": [
       "error",
-      { "code": 200}
-    ],
-    "no-undef": 0
+      {
+        "imports": "never"
+      }
+    ]
   }
 }
