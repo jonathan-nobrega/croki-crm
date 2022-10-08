@@ -1,27 +1,23 @@
 /* This example requires Tailwind CSS v2.0+ */
 import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
+  CalendarIcon, FolderIcon, InboxIcon,
   MenuIcon,
   UsersIcon
 } from '@heroicons/react/outline';
 import { useState } from 'react';
-import SideMenuDesktop from '../components/organisms/SideMenuDesktop';
-import SideMenuMobile from '../components/organisms/SideMenuMobile';
+import SideMenuDesktop from '../../components/organisms/SideMenuDesktop';
+import SideMenuMobile from '../../components/organisms/SideMenuMobile';
+import Table from '../../components/organisms/Table';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false }
+  { name: 'Clients', href: '/app/clients', icon: UsersIcon, current: true },
+  { name: 'Projects', href: '/app/projects', icon: FolderIcon, current: false },
+  { name: 'Invoices', href: '/app/invoices', icon: InboxIcon, current: false },
+  { name: 'Calendar', href: '/app/calendar', icon: CalendarIcon, current: false }
 ];
 
-export default function Example() {
+export default function Client() {
+  const module = 'Clients';
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -52,14 +48,10 @@ export default function Example() {
         <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
+              <h1 className="text-2xl font-semibold text-gray-900">{module}</h1>
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              {/* Replace with your content */}
-              <div className="py-4">
-                <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" />
-              </div>
-              {/* /End replace */}
+            <div className="max-w-7xl mx-auto p-4 sm:px-6 md:px-8">
+              <Table />
             </div>
           </div>
         </main>
