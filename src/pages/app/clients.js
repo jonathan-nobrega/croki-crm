@@ -5,6 +5,7 @@ import {
   UsersIcon
 } from '@heroicons/react/outline';
 import { useState } from 'react';
+import Button from '../../components/atoms/Button';
 import SideMenuDesktop from '../../components/organisms/SideMenuDesktop';
 import SideMenuMobile from '../../components/organisms/SideMenuMobile';
 import Table from '../../components/organisms/Table';
@@ -17,7 +18,7 @@ const navigation = [
 ];
 
 export default function Client() {
-  const module = 'Clients';
+  const module = 'Client';
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -47,12 +48,11 @@ export default function Client() {
         </div>
         <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
           <div className="py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="flex justify-between max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               <h1 className="text-2xl font-semibold text-gray-900">{module}</h1>
+              <Button text={`New ${module}`} type="primary" />
             </div>
-            <div className="max-w-7xl mx-auto p-4 sm:px-6 md:px-8">
-              <Table />
-            </div>
+            <Table />
           </div>
         </main>
       </div>
