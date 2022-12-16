@@ -6,7 +6,7 @@ I have gathered the main features I find necessary for any business to run prope
 
 ## The story behind it
 
-I once tried to create an ERP for architects and interior designers - a very niched application. Back then I launched an MVP using low-code tools, but the project didn't go on. So I decided to finally build it from scratch with no expectations this time.
+I once tried to create an ERP for architects and interior designers - a very niched application. Back then I launched an MVP using low-code tools, but the project didn't go on. So I decided to finally build it from scratch using the tools I love - no low-code tools involved this time.
 
 ## Getting started
 
