@@ -6,7 +6,7 @@ I have gathered the main features I find necessary for any business to run prope
 
 ## The story behind it
 
-I once tried to create an ERP for architects and interior designers - a very niched application. Back then I launched an MVP using low-code tools, but the project didn't go on. So I decided to finally build it from scratch using the tools I love - no low-code tools involved this time.
+I once tried to create an ERP for architects and designers - a very niched application. Back then I launched an MVP using low-code tools (Zoho Creator), but the project didn't go on. So I decided to finally build it from scratch using the tools I love.
 
 ## Getting started
 
@@ -26,10 +26,24 @@ Or checking the lattest production version at: [croki-crm.vercel.app](https://cr
 
 ## User Stories
 
-- [X] Setting up de project
-- [X] Create Readme
-- [ ] As a client, I want to register my clients, so I can see my contacts sorted alphabetically
+- [X] Setup up the project
+- [ ] As a client, I want to register my clients, so I can see them sorted alphabetically
 - [ ] As a client, I want to register my projects, so I can relate them to the clients
 - [ ] As a client, I want to register my invoices, so I can each project profitability
 
-No stories left? You should create a pool on LinkedIn new features suggestions.
+No stories left? You should create a pool on LinkedIn for new features suggestions.
+
+## Tasks
+
+### Front-end
+
+- [ ] feat: Clicking "New client" button opens a modal for insertion
+- [ ] feat: Client module list is paged and limited to 10 items
+- [ ] feat: Clients module reads data from DB with API
+- [ ] refactor: Break side menu mobile to smaller components
+
+### Back-end
+
+- [ ] build: Setup Firebase in the project
+- [ ] feat: Create Clients module API with CRUD methods
+- [ ] test: Add JEST tests to client services
