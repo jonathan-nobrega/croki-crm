@@ -1,9 +1,14 @@
 import * as functions from "firebase-functions";
+import clientsController from "./controllers/clients.controller";
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+
+export const ping = functions.https.onRequest((_request, response) => {
+  functions.logger.info("Ping!", {structuredData: true});
+  response.send("Ping!");
+});
+
+export const clients = functions.https.onRequest(async (request, response) => {
+  functions.logger.info("Clients route started..");
+  const controller = await clientsController(request, response);
+  return controller;
+});
