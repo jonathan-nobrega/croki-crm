@@ -1,6 +1,9 @@
+// import { initializeApp } from "firebase-admin/app";
 import * as functions from "firebase-functions";
 import clientsController from "./controllers/clients.controller";
 import swagger from "./documentation/swagger.controller";
+
+// initializeApp();
 
 
 export const ping = functions.https.onRequest((_request, response) => {

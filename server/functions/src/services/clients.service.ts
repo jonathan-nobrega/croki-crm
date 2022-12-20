@@ -3,19 +3,26 @@ import { getFirestore } from "firebase-admin/firestore";
 import { logger } from "firebase-functions/v1";
 import { Client } from "./../models/interfaces/client.interface";
 
-initializeApp();
-const db = getFirestore().collection("clients");
+const db = (() => {
+  initializeApp();
+  return getFirestore().collection("clients");
+})();
 
 export const getAllClients = async () => {
-  logger.info("Getting all docs from Clients collection..");
-  const snapshot = await db.get();
-  const clients = snapshot.docs.map((doc)=> {
-    return {
-      id: doc.id,
-      ...doc.data(),
-    };
-  });
-  return clients;
+  try {
+    logger.info("Getting all docs from Clients collection..");
+    const snapshot = await db.get();
+    const clients = snapshot.docs.map((doc)=> {
+      return {
+        id: doc.id,
+        ...doc.data(),
+      };
+    });
+    return clients;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
 };
 
 export const getOneClient = async (id: string) => {
