@@ -2,13 +2,21 @@
 import cors from "cors";
 import express from "express";
 import { logger } from "firebase-functions/v1";
-import {
-  createClient, deleteClient, getAllClients, getOneClient, updateClient
-} from "../services/clients.service";
+import { validateClient } from "../middleware/client.validate";
+import { createClient, deleteClient, getAllClients, getOneClient, updateClient } from "../services/clients.service";
 
 const clientsController = express();
 clientsController.use(cors({origin: true}));
 
+/**
+ * @openapi
+ * /:
+ *   get:
+ *     description: Welcome to swagger-jsdoc!
+ *     responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
 clientsController.get("/", async (_req, res) => {
   try {
     logger.info("Clients GET method called..");
@@ -31,13 +39,13 @@ clientsController.get("/:id", async (req, res) => {
   }
 });
 
-clientsController.post("/", async (req, res) => {
+clientsController.post("/", validateClient, async (req, res) => {
   try {
     logger.info("Clients POST method called..");
-    const clients = await createClient();
+    const clients = await createClient(req.body);
     res.send(clients);
   } catch (err) {
-    logger.error(err);
+    // logger.error(err);
     return err;
   }
 });
