@@ -44,6 +44,6 @@ No stories left? You should create a pool on LinkedIn for new features suggestio
 
 ### Back-end
 
-- [ ] build: Setup Firebase in the project
-- [ ] feat: Create Clients module API with CRUD methods
+- [X] build: Setup Firebase in the project
+- [X] feat: Create Clients module API with CRUD methods
 - [ ] test: Add JEST tests to client services

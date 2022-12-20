@@ -33,25 +33,25 @@ export const getOneClient = async (id: string) => {
 export const createClient = async (payload: Client) => {
   logger.info("Creating doc at Clients collection..", payload);
   const doc = await db.add({...payload});
-  // console.log(payload);
-  // console.log(doc);
-  // if (doc.data()) {
-  //   return {
-  //     id: doc.id,
-  //     ...doc.data(),
-  //   };
-  // }
-  return doc;
+  return {
+    id: doc.id,
+    ...payload,
+  };
 };
 
-export const updateClient = async (id: string) => {
+export const updateClient = async (id: string, payload: Client) => {
   logger.info(`Updating doc ${id} from Clients collection..`);
-  return id;
+  await db.doc(id).update({...payload});
+  return {
+    id,
+    ...payload,
+  };
 };
 
 export const deleteClient = async (id: string) => {
   logger.info(`Deleting client ${id}`);
-  return id;
+  await db.doc(id).delete();
+  return {};
 };
 
 export const findClient = async (word: string) => {
