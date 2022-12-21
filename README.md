@@ -12,6 +12,11 @@ I once tried to create an ERP for architects and designers - a very niched appli
 
 You can run it locally by running a NextJS server:
 
+Find client's directory
+```bash
+cd client
+```
+
 Install dependencies and then run the production environment:
 
 ```bash
