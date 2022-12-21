@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import axios from 'axios';
 import Link from 'next/link';
+import Router from 'next/router';
 import { useState } from 'react';
 import RecordModal from '../organisms/UpdateModal';
 
@@ -9,6 +11,16 @@ export default function TableLine({ lineItem }) {
 
   function openModal() {
     setIsOpen(true);
+  }
+
+  async function deleteRecord() {
+    await axios({
+      url: `${process.env.NEXT_PUBLIC_API_URL}/clients/${id}`,
+      method: 'delete'
+    }).then((a) => {
+      console.log(a);
+      Router.reload(window.location.pathname);
+    });
   }
 
   return (
@@ -50,6 +62,7 @@ export default function TableLine({ lineItem }) {
             {status ? 'Active' : 'Inactive'}
           </span>
         </td>
+
         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
           <button
             type="button"
@@ -59,6 +72,17 @@ export default function TableLine({ lineItem }) {
             Edit
           </button>
         </td>
+
+        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+          <button
+            type="button"
+            className="text-indigo-600 hover:text-indigo-900"
+            onClick={deleteRecord}
+          >
+            Delete
+          </button>
+        </td>
+
       </tr>
     </>
   );
