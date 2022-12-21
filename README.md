@@ -27,24 +27,27 @@ Or checking the lattest production version at: [croki-crm.vercel.app](https://cr
 ## User Stories
 
 - [X] Setup up the project
-- [ ] As a client, I want to register my clients, so I can see them sorted alphabetically
+- [X] As a client, I want to register my clients, so I can see them sorted alphabetically
 - [ ] As a client, I want to register my projects, so I can relate them to the clients
 - [ ] As a client, I want to register my invoices, so I can each project profitability
 
 No stories left? You should create a pool on LinkedIn for new features suggestions.
 
-## Tasks
+## Future Tasks
+- [ ] test: Add JEST tests to client services
+- [ ] docs: Add Swagger UI with JSDoc specs
 
 ### Front-end
 
 - [X] feat: Clicking "New client" button opens a modal for insertion
-- [ ] feat: Client module list is paged and limited to 10 items
-- [ ] feat: Clients module reads data from DB with API
-- [ ] refactor: Break side menu mobile to smaller components
+- [X] feat: Clients module reads data from DB with API
+- [X] feat: Clients module opens an Update modal
+- [X] feat: Client module opens a Create modal
+- [X] feat: Client module delete button
 
 ### Back-end
 
-- [X] build: Setup Firebase in the project
-- [X] feat: Create Clients module API with CRUD methods
-- [ ] test: Add JEST tests to client services
-- [ ] docs: Add Swagger UI with JSDoc specs
+- [X] build: Setup Firebase to the project
+- [X] build: Setup Firestore to the project
+- [X] test: Add JOI validation to inputs
+- [X] feat: Clients module API with CRUD methods

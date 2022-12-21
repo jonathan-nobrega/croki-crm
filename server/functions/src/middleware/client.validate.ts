@@ -10,7 +10,8 @@ export const validateClient = (
   const {error} = Joi.object().keys({
     name: Joi.string().min(3).max(40).required(),
     // phone: Joi.string().min(9).max(16).pattern(/^[0-9]+$/).required(),
-    phone: Joi.string().min(9).max(16).required(),
+    // phone: Joi.string().min(9).max(16).required(),
+    phone: Joi.string().max(16).required(),
     email: Joi.string().email().required(),
     industry: Joi.string(),
     website: Joi.string(),

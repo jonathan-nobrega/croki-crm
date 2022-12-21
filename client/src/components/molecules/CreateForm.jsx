@@ -153,7 +153,7 @@ export default function Example(props) {
                     hover:bg-croki-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 onClick={updateRecord}
               >
-                Update
+                Create
               </button>
               <button
                 type="button"
