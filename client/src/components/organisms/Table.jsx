@@ -34,8 +34,11 @@ export default function Table() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {Clients.map((person) => (
-                    <TableLine lineItem={person} />
+                  {Clients.map((person, index) => (
+                    <TableLine
+                      key={index}
+                      lineItem={person}
+                    />
                   ))}
                 </tbody>
               </table>

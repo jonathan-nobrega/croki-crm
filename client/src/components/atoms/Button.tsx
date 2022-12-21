@@ -26,9 +26,9 @@ export default function Button(props: ButtonStyle) {
   return (
     <button
       type="button"
-      className={`inline-flex items-center px-3 py-2 border border-transparent rounded-lg shadow-sm ${style}`}
+      className={`font-medium text-sm inline-flex items-center px-3 py-2 border border-transparent rounded-lg shadow-sm ${style}`}
     >
-      <PlusIconOutline className="h-6 w-6 mr-2" aria-hidden="true" />
+      <PlusIconOutline className="h-5 w-5 mr-2" aria-hidden="true" />
       {text}
     </button>
   );
