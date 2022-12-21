@@ -18,8 +18,8 @@ export default function SideMenuDesktop(props) {
             <div className="flex items-center flex-shrink-0 px-4">
               <img
                 className="h-14 w-auto text-center"
-                src="/croki-letra-branca.PNG"
-                alt="Workflow"
+                src="/croki-letra-branca.png"
+                alt="logo"
               />
             </div>
             <nav className="mt-5 flex-1 px-2 bg-croki-400 space-y-1">
