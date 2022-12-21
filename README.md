@@ -18,7 +18,7 @@ Install dependencies and then run the production environment:
 # install npm packages
 npm install
 
-# run development environment
+# run production environment
 npm run prod
 ```
 
