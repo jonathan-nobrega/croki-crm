@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import Clients from '../../models/utils/clients';
 import TableLine from '../molecules/TableLine';
 
@@ -9,6 +10,14 @@ const headers = [
 
 export default function Table() {
   const [items, setItems] = useState(Clients);
+
+  useEffect(() => {
+    async function fetchClients() {
+      const data = await axios.get('https://us-central1-croki-crm-api.cloudfunctions.net/clients');
+      setItems(data.data);
+    }
+    fetchClients();
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto p-4 sm:px-6 md:px-8">
@@ -34,9 +43,9 @@ export default function Table() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {Clients.map((person, index) => (
+                  {items.map((person) => (
                     <TableLine
-                      key={index}
+                      key={person.id}
                       lineItem={person}
                     />
                   ))}

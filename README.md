@@ -37,7 +37,7 @@ No stories left? You should create a pool on LinkedIn for new features suggestio
 
 ### Front-end
 
-- [ ] feat: Clicking "New client" button opens a modal for insertion
+- [X] feat: Clicking "New client" button opens a modal for insertion
 - [ ] feat: Client module list is paged and limited to 10 items
 - [ ] feat: Clients module reads data from DB with API
 - [ ] refactor: Break side menu mobile to smaller components

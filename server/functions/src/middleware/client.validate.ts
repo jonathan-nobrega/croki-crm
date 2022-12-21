@@ -8,17 +8,12 @@ export const validateClient = (
 ) => {
   const {error} = Joi.object().keys({
     name: Joi.string().min(3).max(40).required(),
-    phone: Joi.string().min(9).max(12).pattern(/^[0-9]+$/).required(),
+    // phone: Joi.string().min(9).max(16).pattern(/^[0-9]+$/).required(),
+    phone: Joi.string().min(9).max(16).required(),
     email: Joi.string().email().required(),
-    industry: Joi.string().valid(
-        "Healthcare",
-        "Technology",
-        "Construction",
-        "Retail",
-        "Manufactoring",
-        "Services",
-    ).default("Services"),
+    industry: Joi.string(),
     website: Joi.string(),
+    logoLink: Joi.string(),
     identificationType: Joi.string().valid("CPF", "CNPJ", "SSN", "EIN"),
     identificationNmber: Joi.number(),
   }).validate(req.body);

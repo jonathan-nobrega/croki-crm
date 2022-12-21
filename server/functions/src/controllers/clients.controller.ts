@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 
 import cors from "cors";
 import express from "express";
