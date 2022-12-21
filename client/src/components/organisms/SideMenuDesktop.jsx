@@ -43,7 +43,7 @@ export default function SideMenuDesktop(props) {
               ))}
             </nav>
           </div>
-          <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
+          <div className="flex-shrink-0 flex border-t border-croki-300 p-4">
             <Link href="/">
               <a href="#top" className="flex-shrink-0 w-full group block">
                 <UserProfile />

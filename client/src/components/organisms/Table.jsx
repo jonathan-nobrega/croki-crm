@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Clients from '../../models/utils/clients';
 import TableLine from '../molecules/TableLine';
 
 const headers = [
@@ -9,14 +8,16 @@ const headers = [
 ];
 
 export default function Table() {
-  const [items, setItems] = useState(Clients);
+  const [items, setItems] = useState();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchClients() {
-      const data = await axios.get('https://us-central1-croki-crm-api.cloudfunctions.net/clients');
-      setItems(data.data);
+    async function data() {
+      const fetchClients = await axios.get('https://us-central1-croki-crm-api.cloudfunctions.net/clients');
+      setItems(fetchClients.data);
+      setLoading(false);
     }
-    fetchClients();
+    data();
   }, []);
 
   return (
@@ -43,12 +44,18 @@ export default function Table() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {items.map((person) => (
-                    <TableLine
-                      key={person.id}
-                      lineItem={person}
-                    />
-                  ))}
+                  {/* Having some issues with loading component
+                  and HeadlessUI child components structure */}
+                  {/* {loading && (
+                    <Loading />
+                  )} */}
+                  {items
+                    && (items.map((person) => (
+                      <TableLine
+                        key={person.id}
+                        lineItem={person}
+                      />
+                    )))}
                 </tbody>
               </table>
             </div>

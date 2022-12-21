@@ -38,7 +38,7 @@ const Clients = [
     identificationNumber: 14253647586970,
     projectsCount: 1,
     projectsRevenue: 501630,
-    status: true,
+    status: false,
     logoLink: 'https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/301488790_510867144375734_814495292414147833_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=tqqUisawJKoAX8NA3gI&_nc_ht=scontent-iad3-2.xx&oh=00_AT8nvqdeGf-yeasKO9raT8SBRAvG1CpGZtT-o_wUAATAMA&oe=63474000'
   },
   // More people...
@@ -53,7 +53,7 @@ const Clients = [
     identificationNumber: 38475627384576,
     projectsCount: 2,
     projectsRevenue: 765320,
-    status: true,
+    status: false,
     logoLink: 'https://i.pinimg.com/originals/68/40/f3/6840f3293a5d4ddaa70ae6f1e32d93ca.png'
   }
 ];

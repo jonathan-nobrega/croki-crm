@@ -5,7 +5,8 @@
         "email": "sky@catch.fire",
         "industry": "Computer Software",
         "website": "https://www.skycatchfire.com/",
-        "logoLink": "https://pbs.twimg.com/profile_images/1591594942291492866/c-1qiHj8_400x400.jpg"
+        "logoLink": "https://pbs.twimg.com/profile_images/1591594942291492866/c-1qiHj8_400x400.jpg",
+        "status": true
     },
     {
         "name": "Google",
@@ -13,7 +14,8 @@
         "email": "go@google.com",
         "industry": "Computer Software",
         "website": "https://www.google.com/",
-        "logoLink": "https://pbs.twimg.com/profile_images/930967233479655424/tYq-2FNL_400x400.jpg"
+        "logoLink": "https://pbs.twimg.com/profile_images/930967233479655424/tYq-2FNL_400x400.jpg",
+        "status": false
     },
     {
         "name": "Amazon",
@@ -21,7 +23,8 @@
         "email": "alexa@amazon.com",
         "industry": "Computer Software",
         "website": "https://www.amazon.com/",
-        "logoLink": "https://pbs.twimg.com/profile_images/1587352380454338561/Uav_0HHn_400x400.jpg"
+        "logoLink": "https://pbs.twimg.com/profile_images/1587352380454338561/Uav_0HHn_400x400.jpg",
+        "status": false
     },
     {
         "name": "Dunder Mifflin Infinity",
@@ -29,6 +32,7 @@
         "email": "michael_scott@dmpc.com",
         "industry": "Computer Software",
         "website": "https://www.amazon.com/",
-        "logoLink": "https://static.wikia.nocookie.net/theoffice/images/5/53/Dmilogo.jpg/revision/latest?cb=20091221095019"
+        "logoLink": "https://static.wikia.nocookie.net/theoffice/images/5/53/Dmilogo.jpg/revision/latest?cb=20091221095019",
+        "status": true
     }
 ]

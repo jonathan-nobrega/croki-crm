@@ -43,25 +43,13 @@ export default function RecordModal(props) {
                 >
                   Client Information
                 </Dialog.Title>
-                <ClientForm />
-                <div className="mt-4">
-                  <button
-                    type="button"
-                    className="mr-5 inline-flex justify-center rounded-md border border-transparent bg-croki-300 px-4 py-2 text-sm font-medium text-white
-                    hover:bg-croki-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                    onClick={closeModal}
-                  >
-                    Update
-                  </button>
-                  <button
-                    type="button"
-                    className="inline-flex justify-center rounded-md border-2 border-croki-200 px-4 py-2 text-sm font-medium text-gray-900
-                    hover:bg-croki-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                    onClick={closeModal}
-                  >
-                    Close
-                  </button>
-                </div>
+
+                <ClientForm
+                  data={data}
+                  setIsOpen={setIsOpen}
+                  isOpen={isOpen}
+                />
+
               </Dialog.Panel>
             </Transition.Child>
           </div>
