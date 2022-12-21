@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-bind */
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
-import ClientForm from '../molecules/ClientForm';
+import UpdateForm from '../molecules/UpdateForm';
 
 export default function RecordModal(props) {
   const { data, isOpen, setIsOpen } = props;
@@ -44,7 +44,7 @@ export default function RecordModal(props) {
                   Client Information
                 </Dialog.Title>
 
-                <ClientForm
+                <UpdateForm
                   data={data}
                   setIsOpen={setIsOpen}
                   isOpen={isOpen}

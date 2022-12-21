@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextFunction, Request, Response } from "express";
+import { logger } from "firebase-functions/v1";
 import Joi from "joi";
 
 
@@ -14,11 +15,13 @@ export const validateClient = (
     industry: Joi.string(),
     website: Joi.string(),
     logoLink: Joi.string(),
-    identificationType: Joi.string().valid("CPF", "CNPJ", "SSN", "EIN"),
-    identificationNmber: Joi.number(),
+    status: Joi.string().valid("active", "inactive"),
+    // identificationType: Joi.string().valid("CPF", "CNPJ", "SSN", "EIN"),
+    // identificationNmber: Joi.number(),
   }).validate(req.body);
 
   if (error) {
+    logger.error(error);
     return res.status(422).send(error.details);
   }
   return next();

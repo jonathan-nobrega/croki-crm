@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { useState } from 'react';
-import RecordModal from '../organisms/RecordModal';
+import RecordModal from '../organisms/UpdateModal';
 
 export default function TableLine({ lineItem }) {
   const { name, email, industry, website, status, id, logoLink } = lineItem;
-
   const [isOpen, setIsOpen] = useState(false);
 
   function openModal() {
