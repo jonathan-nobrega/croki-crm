@@ -12,17 +12,17 @@ I once tried to create an ERP for architects and designers - a very niched appli
 
 You can run it locally by running a NextJS server:
 
-First, run the development server:
+Install dependencies and then run the production environment:
 
 ```bash
 # install npm packages
 npm install
 
 # run development environment
-npm run dev
+npm run prod
 ```
 
-Or checking the lattest production version at: [croki-crm.vercel.app](https://croki-crm.vercel.app/)
+Also check the lattest production version at: [croki-crm.vercel.app](https://croki-crm.vercel.app/)
 
 ## User Stories
 
