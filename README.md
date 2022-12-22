@@ -41,6 +41,7 @@ No stories left? You should create a pool on LinkedIn for new features suggestio
 ## Future Tasks
 - [ ] test: Add JEST tests to client services
 - [ ] docs: Add Swagger UI with JSDoc specs
+- [ ] feat: Handle API errors on the UI
 
 ### Front-end
 
