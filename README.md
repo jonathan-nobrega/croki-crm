@@ -1,8 +1,8 @@
-<img src="/croki-verde.PNG" alt="croki-verde" width="300"/>
-
 # CRM Essentials
 
-I have gathered the main features I find necessary for any business to run properly. Who are your clients? What projects are you working on? How much I am getting paid this month? If we can't get those questions answered quickly,  we're on a bad path. This project is looking to solve those simple but essential matters.
+<img src="./client/public/croki-screen-shot.PNG" alt="croki-verde" width="600"/>
+
+I have gathered some features I find necessary for any business to run properly. Who are your clients? What projects are you working on? How much I am getting paid this month? If we can't get those questions answered quickly,  we're on a bad path. This project is looking to solve those simple but essential matters.
 
 ## Getting started
 
