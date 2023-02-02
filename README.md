@@ -1,6 +1,6 @@
 # CRM Essentials
 
-<img src="./client/public/croki-screen-shot.PNG" alt="croki-verde" width="600"/>
+<img src="https://github.com/moraesjon/croki-crm/blob/main/client/public/croki-screen-shot.png?raw=true" alt="croki-verde" width="600"/>
 
 I have gathered some features I find necessary for any business to run properly. Who are your clients? What projects are you working on? How much I am getting paid this month? If we can't get those questions answered quickly,  we're on a bad path. This project is looking to solve those simple but essential matters.
 
