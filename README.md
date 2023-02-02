@@ -4,10 +4,6 @@
 
 I have gathered the main features I find necessary for any business to run properly. Who are your clients? What projects are you working on? How much I am getting paid this month? If we can't get those questions answered quickly,  we're on a bad path. This project is looking to solve those simple but essential matters.
 
-## The story behind it
-
-I once tried to create an ERP for architects and designers - a very niched application. Back then I launched an MVP using low-code tools (Zoho Creator), but the project didn't go on. So I decided to finally build it from scratch using the tools I love.
-
 ## Getting started
 
 You can run it locally by running a NextJS server:
